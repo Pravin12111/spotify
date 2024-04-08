@@ -1,12 +1,10 @@
 
 import './App.css';
-
+import Login from './Login'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>SPOTIFY</h1>
-      </header>
+        <Login/>
     </div>
   );
 }
