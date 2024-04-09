@@ -15,4 +15,15 @@ const scopes = [
     "user-modify-playback-state",
 ];
 
+
+export const getTokenFromUrl = ()=>{
+    return window.location.hash
+    .substring(1).split('&').reduce((intital,item)=>{
+        let parts = item.split("=")
+        intital[parts[0]]=decodeURIComponent(parts[1])
+        return intital;
+
+    },{});
+    //#accessToken=mysupersecretekey&name=pravin&a
+}
 export const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUrl}&scope=${scopes.join("%20")}&response_type=token&show_dialog=true`;
