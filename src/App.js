@@ -1,5 +1,5 @@
 
-import React,{ useEffect, useState } from 'react';
+import React,{ useEffect } from 'react';
 import './App.css';
 import Login from './Login'
 import { getTokenFromUrl } from './spotify';
@@ -12,7 +12,7 @@ const spotify = new spotifyWebApi();
 function App() {
   //run code based on a given condition
   //const [token,setToken] =useState(null);
-  const [{ user ,token},dispatch]= useDataLayerValue();
+  const [{ token},dispatch]= useDataLayerValue();
 
   useEffect(()=>{
     //code...
@@ -39,12 +39,19 @@ function App() {
 
         });
       });
-    }
-    console.log('I have a token: ',token);
-  },[]);
 
-  console.log('I am',user);
-  console.log('My token:',token);
+      spotify.getUserPlaylists().then((playlists)=>{
+        dispatch({
+          type: 'SET_PLAYLISTS',
+          playlists: playlists,
+        });
+      });
+    }
+    //console.log('I have a token: ',token);
+  },[token,dispatch]);
+
+  //console.log('I am',user);
+  //console.log('My token:',token);
 
   return (
     <div className="App">

@@ -1,8 +1,67 @@
 .footer{
     position: fixed;
     bottom: 0;
+    display: flex;
+    justify-content: space-between;
     height: 65px;
-    width: 100%;
+    width: 97%;
     background-color: #282828;
     padding: 20px;
 }
+
+.footer-left{
+    flex: 0.3;
+    display: flex;
+    color: white;
+    align-items: center;
+    max-width: 300px;
+}
+.footer-album-logo{
+    height: 60px;
+    width: 60px;
+    margin-right: 20px;
+    object-fit: contain;
+}
+.footer-green{
+    color: #1ed15e;
+}
+.footer-song-info> h4{
+    margin-bottom: 5px;
+}
+.footer-song-info> p{
+    font-size: 12px;
+}
+.footer-center{
+    flex: 0.4;
+    padding: 0 100px;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 300px;
+}
+
+.footer-icon:hover,
+.footer-green:hover{
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.2) !important;
+}
+.footer-right{
+    flex: 0.3;
+}
+
+/* styles.css */
+
+.spotify-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  
+  .slider-container {
+    width: 50%;
+    color: #1ed15e;
+  }
+  
+  
