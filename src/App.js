@@ -7,6 +7,7 @@ import spotifyWebApi from 'spotify-web-api-js';
 import Player from './Player';
 import { useDataLayerValue } from './DataLayer';
 
+
 const spotify = new spotifyWebApi();
 
 function App() {
@@ -46,9 +47,16 @@ function App() {
           playlists: playlists,
         });
       });
+
+      spotify.getPlaylist('37i9dQZF1E37fKyADuTW3e').then((response)=>{
+        dispatch({
+          type: 'SET_DISCOVER_WEEKLY',
+          discover_weekly: response,
+        });
+      });
     }
     //console.log('I have a token: ',token);
-  },[token,dispatch]);
+  },[]);
 
   //console.log('I am',user);
   //console.log('My token:',token);

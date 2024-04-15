@@ -9,7 +9,7 @@ function Header() {
     <div className='header'>
         <div className="header-left">
             <Search/>
-            <input type="text"  placeholder='search for Artists , Songs,Playlists'/>
+            <input type="text"  placeholder='search for Artists , Songs or Playlists'/>
         </div>
         <div className="header-right">
             <AccountCircleIcon src={user?.images[0]?.url} alt={user?.display_name}/>

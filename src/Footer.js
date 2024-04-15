@@ -33,13 +33,13 @@ function Footer() {
 
         <div className="footer-right">
         <Box className="spotify-footer">
-      <IconButton className='footer-green'>
+      <IconButton style={{ color: 'white' }}>
         <PlaylistPlayIcon />
       </IconButton>
       <Box className="slider-container">
-        <Slider aria-label="Volume" />
+        <Slider aria-label="Volume" color='green'/>
       </Box>
-      <IconButton className='footer-green'>
+      <IconButton style={{ color: 'white' }}>
         <VolumeDownIcon />
       </IconButton>
     </Box>

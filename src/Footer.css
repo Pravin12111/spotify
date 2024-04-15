@@ -57,11 +57,33 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
-  }
-  
-  .slider-container {
-    width: 50%;
     color: #1ed15e;
-  }
-  
-  
+}
+
+.slider-container {
+    width: 50%;
+}
+
+@media screen and (max-width:400px) {
+    .footer {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    bottom: 0;
+    height: 74px;
+    width: 80%;
+      /* width: 73%; */
+    background-color: #282828;
+
+}
+.footer-center{
+    padding-top: 5px;
+    justify-content: none;
+}
+.footer-right{
+    display: none;
+}
+}
+
